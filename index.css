@@ -60,7 +60,7 @@
 	  font-size: 12px;
 }
 .item-info{
-	height: 40px;
+	height: auto;
 	background-color: lightgrey;
 }
 .item-wrapper{

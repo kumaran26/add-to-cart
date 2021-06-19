@@ -95,12 +95,32 @@
     formSummaryData();
   }
 
-  function addQty(item){
-    console.log(item)
+  function addQty(name){
+    summary.forEach(function(item){
+      if(item.name === name){
+          item.qty = item.qty + 1;
+          item.total = item.total + item.price.actual;
+      }
+    });
+    calculateTotal();
+    totalItems();
+    formSummaryData();
   }
 
-  function removeQty(item){
-    console.log(item)
+  function removeQty(name){
+    summary.forEach(function(item, index){
+      if(item.name === name){
+        if(item.qty > 1){
+          item.qty = item.qty - 1;
+          item.total = item.total - item.price.actual;
+        } else {
+          summary.splice(index);
+        }
+      }
+    });
+    calculateTotal();
+    totalItems();
+    formSummaryData();
   }
 
   fetch('data/items.json')
