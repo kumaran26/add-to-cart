@@ -16,26 +16,14 @@
       <div class='cart-summary-wrapper'>
          <div class='cart-summary-selected'>
             <table>
-               <tbody>
+               <thead>
                   <tr>
-                     <th>Items</th>
+                     <th>Items <span id='total-items-summary'></span></th>
                      <th>Qty</th>
                      <th>Price</th>
                   </tr>
-                  <tr>
-                     <td>
-                        <div>
-                           <img class='cart-summary-image' src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90">
-                           <span>Item 1</span>
-                           <span class='cart-close'><i class="fa fa-times" aria-hidden="true"></i></span>
-                        </div>
-                     </td>
-                     <td><i class="fa fa-minus" aria-hidden="true"></i>
-                        <span>1</span><i class="fa fa-plus" aria-hidden="true">
-                        </i>
-                     </td>
-                     <td>$420</td>
-                  </tr>
+               </thead>
+               <tbody id='cart-summary-row'>
                </tbody>
             </table>
          </div>
@@ -46,31 +34,31 @@
                   <tbody>
                      <tr>
                         <td>
-                           Item 1
+                           Items <span id='total-items'></span>
                         </td>
                         <td>:</td>
-                        <td>$420</td>
+                        <td>$<span id='total-items-without-discount'></span></td>
                      </tr>
 					 <tr>
                         <td>
                            Discount
                         </td>
                         <td>:</td>
-                        <td>$420</td>
+                        <td>$<span id='total-discount'></span></td>
                      </tr>
 					 <tr>
                         <td>
                            Type Discount
                         </td>
                         <td>:</td>
-                        <td>$420</td>
+                        <td>$</td>
                      </tr>
 					 <tr class='cart-summary-total'>
                         <td>
                            Order total
                         </td>
                         <td>:</td>
-                        <td>$420</td>
+                        <td>$<span id='total-price'></span></td>
                      </tr>
                   </tbody>
                </table>

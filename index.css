@@ -113,4 +113,7 @@ tr{
 .cart-close{
 	float:right;
 }
+.pointer{
+	cursor: pointer;
+}
 
