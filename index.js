@@ -87,7 +87,7 @@
   function removeItem(name){
     summary.forEach(function(item, index){
       if(item.name === name){
-        summary.splice(index);
+        summary.splice(index, 1);
       }
     });
     calculateTotal();
