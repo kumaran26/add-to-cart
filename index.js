@@ -10,15 +10,6 @@
     });
     document.getElementById('items').innerHTML = items;
   }
-  
-  fetch('data/items.json')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(jsonResponse) {
-    data = jsonResponse ? jsonResponse.items : [];
-	displayItems()
-  });
 
   function calculateTotal(){
     var totalPrice = 0;
