@@ -50,6 +50,20 @@
     });
     return itemFound;
   }
+
+  function addQtyAndTotalPrice(individualItem, found){
+    summary.forEach(function(data){
+      if(data.name === individualItem){
+        if(found){
+          data.qty = 1;
+          data.total = data.price.actual;
+        } else {
+          data.qty = data.qty + 1;
+          data.total = data.total + data.price.actual
+        }
+      }
+    });
+  }
   
   function addToCart(individualItem){
     handleAlert(individualItem);
@@ -57,20 +71,10 @@
     var itemFound = itemFound(individualItem);
     if(!found){
       summary.push(itemFound);
-      summary.forEach(function(data){
-        if(data.name === individualItem){
-          data.qty = 1;
-          data.total = data.price.actual;
-        }
-      });
+      addQtyAndTotalPrice(individualItem, true);
     } else {
-      summary.forEach(function(data){
-        if(data.name === individualItem){
-          data.qty = data.qty + 1;
-          data.total = data.total + data.price.actual;
-        }     
-      });
-  }
+      addQtyAndTotalPrice(individualItem);
+    }
     formSummaryData();
     calculateTotal();
     totalItems();
