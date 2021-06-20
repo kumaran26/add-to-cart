@@ -22,13 +22,17 @@
     document.getElementById('total-items-without-discount').innerHTML = totalPriceWithoutDiscount;
     document.getElementById('total-discount').innerHTML = totalPriceWithoutDiscount - totalPrice;
   }
-  
-  function addToCart(individualItem){
+
+  function handleAlert(individualItem){
     document.getElementsByClassName('cart-header-alert')[0].style.display = 'block';
     document.getElementsByClassName('cart-header-alert')[0].innerHTML = individualItem + ' is added to the cart';
     setTimeout(function(){
       document.getElementsByClassName('cart-header-alert')[0].style.display = 'none';
     }, 2000);
+  }
+  
+  function addToCart(individualItem){
+    handleAlert(individualItem);
     var found = false;
     var itemFound = {};
     summary.forEach(function(data){
