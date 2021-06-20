@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Page Title</title>
-      <link rel="stylesheet" href="index.css">
-	  <link rel="stylesheet" href="css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
-   </head>
-   <body class='cart'>
-      <div class="cart-header">
-         <span class="cart-header-text">All Items</span>
-         <div class="cart-header-alert"></div>
-      </div>
-      <div class='item-wrapper' id='items'>
-         
-      </div>
-      <div class='cart-summary-wrapper'>
-         <div class='cart-summary-selected'>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+</head>
+
+<body class='cart'>
+    <div class="cart-header">
+        <span class="cart-header-text">All Items</span>
+        <div class="cart-header-alert"></div>
+    </div>
+    <div class='item-wrapper' id='items'>
+
+    </div>
+    <div class='cart-summary-wrapper'>
+        <div class='cart-summary-selected'>
             <table>
-               <thead>
-                  <tr>
-                     <th>Items <span id='total-items-summary'></span></th>
-                     <th>Qty</th>
-                     <th>Price</th>
-                  </tr>
-               </thead>
-               <tbody id='cart-summary-row'>
-               </tbody>
+                <thead>
+                    <tr>
+                        <th>Items <span id='total-items-summary'></span></th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id='cart-summary-row'>
+                </tbody>
             </table>
-         </div>
-         <div class='cart-total'>
+        </div>
+        <div class='cart-total'>
             <div>
-               <p class='pad-l10'>Total</p>
-               <table>
-                  <tbody>
-                     <tr>
-                        <td>
-                           Items <span id='total-items'></span>
-                        </td>
-                        <td>:</td>
-                        <td>$<span id='total-items-without-discount'></span></td>
-                     </tr>
-					 <tr>
-                        <td>
-                           Discount
-                        </td>
-                        <td>:</td>
-                        <td>-$<span id='total-discount'></span></td>
-                     </tr>
-					 <tr>
-                        <td>
-                           Type Discount
-                        </td>
-                        <td>:</td>
-                        <td>-$</td>
-                     </tr>
-					 <tr class='cart-summary-total'>
-                        <td>
-                           Order total
-                        </td>
-                        <td>:</td>
-                        <td>$<span id='total-price'></span></td>
-                     </tr>
-                  </tbody>
-               </table>
+                <p class='pad-l10'>Total</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Items <span id='total-items'></span>
+                            </td>
+                            <td>:</td>
+                            <td>$<span id='total-items-without-discount'></span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Discount
+                            </td>
+                            <td>:</td>
+                            <td>-$<span id='total-discount'></span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Type Discount
+                            </td>
+                            <td>:</td>
+                            <td>-$</td>
+                        </tr>
+                        <tr class='cart-summary-total'>
+                            <td>
+                                Order total
+                            </td>
+                            <td>:</td>
+                            <td>$<span id='total-price'></span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-         </div>
-      </div>
-      <script src="index.js"></script>
-   </body>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
 </html>
