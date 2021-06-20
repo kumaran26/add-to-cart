@@ -30,21 +30,31 @@
       document.getElementsByClassName('cart-header-alert')[0].style.display = 'none';
     }, 2000);
   }
-  
-  function addToCart(individualItem){
-    handleAlert(individualItem);
+
+  function isItemFound(individualItem){
     var found = false;
-    var itemFound = {};
     summary.forEach(function(data){
       if(data.name === individualItem){
         found = true;
       }     
     });
+    return found;
+  }
+
+  function itemFound(individualItem){
+    var itemFound = {};
     data.forEach(function(item){
       if(item.name === individualItem){
         itemFound = item;
       }
-    })
+    });
+    return itemFound;
+  }
+  
+  function addToCart(individualItem){
+    handleAlert(individualItem);
+    var found = isItemFound(individualItem);
+    var itemFound = itemFound(individualItem);
     if(!found){
       summary.push(itemFound);
       summary.forEach(function(data){
@@ -61,7 +71,7 @@
         }     
       });
   }
-  formSummaryData();
+    formSummaryData();
     calculateTotal();
     totalItems();
   }
